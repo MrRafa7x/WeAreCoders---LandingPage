@@ -1,0 +1,454 @@
+*{margin:  0;
+    box-sizing: border-box;
+    transition: 0.5s;}
+    
+    html {
+        scroll-behavior: smooth;
+      }
+      
+      /* Sistema de temas */
+      
+      :root {
+    --cor1: #4A0000;
+    --cor2: #5D0101;
+    --cor3: linear-gradient(180deg, #5d0101 0%, #c30303 100%);
+    --cor4: linear-gradient(90deg, #960000 0%, #E42323 100%);
+    --icone-tema: url(IMAGES/dark.png);
+    --fundo-botao-tema: white;
+}
+
+[tema-atual="dark"] {
+    --cor1: #1d1d1d;
+    --cor2: #2c2c2c;
+    --cor3: linear-gradient(180deg, #2c2c2c 0%, #0e0e0e 100%);
+    --cor4: linear-gradient(90deg, #131313 0%, #161616 100%);
+    --icone-tema: url(IMAGES/light.png);
+    --fundo-botao-tema: black;
+}
+
+.ThemeMode{
+    background-color: var(--fundo-botao-tema);
+    opacity: 0.8;
+    width: 64px;
+    height: 64px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    button{
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+    img{
+        position: absolute;
+        width: 52px;
+        content: var(--icone-tema);
+    }
+}
+
+#Cor1{ background-color: var(--cor1); }
+#Cor2{ background-color: var(--cor2); }
+#Cor3{ background: var(--cor3); }
+#Cor4{ background: var(--cor4); }
+
+
+    /* HEADER */
+    .MainHeader{ 
+        display: grid;
+        grid-template-columns: 132px 1fr 1fr 400px 1fr 1fr 132px; /* divisao de colunas */
+        grid-template-rows: 110px 90px; /* divisao de linhas */
+        height: 110px;
+        position: fixed;
+        width: 100%;
+        z-index: 99;
+    }
+    
+    .logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 100px;
+            height: 100px;
+        }
+        
+    }
+    
+    .Home{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 30px;
+            height: 30px;
+        }
+        
+    }
+    
+    .LogoText{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+        img{
+            width: 400px;
+        }
+    }
+    
+    /* BOTÕES DO HEADER */
+    .Buttons{
+        font-family: "Inter";
+        font-weight: 600;
+        line-height: 1.1rem;
+        font-size: 16px;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        span{
+            padding-right: 10px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    }
+    
+    /* caixa de pesquisa search */
+    .SearchBar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        #Caixa{
+            background-color: white;
+            width: 100%;
+            height: 60%;
+            opacity: 70%;
+            border-radius: 30px;
+            border: solid black 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            span{
+                margin-left: 20px;
+            }
+            .Bar{
+                width: 320px;
+                height: 30px;
+                border: 0;
+            }
+        }
+    }
+    
+
+    
+    /* INÍCIO DO SITE */
+    /* AD */
+    .AD{
+        width: 100%;
+        height: 10vh;
+        background-color: #4A0000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;  /* temporário */
+        font-family: "Inter";
+        font-weight: 600;
+        color: white;
+    }
+    
+    /* Pra jogar pra baixo */
+    .Sec01{
+        padding-top: 200px;
+    }
+    
+    /* Produtos */
+    .Produtos{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* divisao de colunas */
+    }
+    
+    .Sec02{
+        padding-top: 20px;
+        font-family: "Inter";
+        color: white;
+        display: grid;
+        grid-template-columns: 40% 1fr;
+        .Modelo{
+            img{
+                width: 650px;
+            }
+        }
+        .TextContainer{
+            padding-top: 30px;
+            h3{
+                
+                width: 300px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 24px;
+                font-weight: 600;
+                border-radius: 100px;
+            }
+            h1{
+                padding-top: 25px;
+                font-size: 84px;
+                line-height: 1.1em;
+            }
+            h2{
+                font-size: 54px;
+                height: 54px;
+            }
+            h4{
+                color: #0DBE0D;
+                font-size: 84px;
+                height: 144px;
+            }
+            p{
+                font-size: 34px;
+                font-weight: 600;
+            }
+            #BtnComprarAgr{
+                background-color: black;
+                width: 300px;
+                height: 60px;
+                font-size: 24px;
+                font-weight: 600;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 20px;
+                border: none;
+                cursor: pointer;
+                a{color: white; text-decoration: none;}
+            }
+            #BtnComprarAgr:hover{
+                font-size: 26px;
+            }
+            .Opções{
+                width: 80%;
+                padding-top: 25px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                div{
+                    display: grid;
+                    grid-template-columns: 22% 1fr;
+                    #Card{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 72px;
+                    }
+                    #Safe{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 72px;
+                    }
+                    p{
+                        display: flex;
+                        align-items: center;
+                        font-size: 20px;
+                        line-height: 1.5em;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+
+    .Sec03{
+        margin-left: 75px;
+        margin-right: 75px;
+        /* Texto Categoria TOP SALES*/
+        h1{
+            margin-top: 10px;
+            color: white; 
+            font-family: "Inter";
+            height: 70px;
+            display: flex;
+            align-items: center;
+            padding: 25px;
+            span{
+                padding-right: 10px;
+                img{
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+            
+        }
+        hr{
+            height: 1px;
+            border: none;
+            background-color: white;
+            position: relative;
+            bottom: 10px;
+            opacity: 50%;
+        }
+        
+        /* Produto */
+        .Camisa{
+            background-color: white;
+            height: 430px;
+            width: 300px;
+            border-radius: 2%;
+            img{
+                border-radius: 2%;
+                width: 300px;
+                height: 300px;
+            }
+            p{
+                font-family: "Inter";
+                font-weight: 500;
+                text-align: center;
+                line-height: 1.1;
+                height: 36px;
+            }
+            #ItemPrice{
+                font-weight: 600;
+                font-size: 32px;
+                height: 32px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            button{
+                margin-top: 10px;
+                background-color: black;
+                border: none;
+                width: 100%;
+                height: 9%;
+                border-radius: 2%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: 600;
+                font-size: 20px;
+                a{
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+            button:hover{
+                background-color: rgb(120, 248, 120);
+                cursor: pointer;
+                font-size: 30px;
+                a{
+                    color: black;
+                }
+            }
+        }
+    }
+    
+    .Desconto{
+        background-color: #121212;
+        height: 20vh;
+        margin-top: 75px;
+        margin-left: -75px;
+        margin-right: -75px;
+        color: white;
+        font-family: "Inter";
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; /* divisao de colunas */
+
+        img{
+            width: 60%;
+        }
+
+        .UsarCupom{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            padding-right: 70%;
+            p{
+                font-size: 20px;
+            }
+            #Cupom{
+                font-weight: 600;
+                font-size: 24px;
+                border: rgba(255, 255, 255, 0.603) solid 2px;
+                
+            }
+        }
+
+        .PrimeiraCompra{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 80px;
+            h1{
+                padding: 0;
+                font-size: 60px;
+                font-weight: 800;
+            }
+            p{
+                font-size: 40px;
+            }
+        }
+
+    }
+
+    /* Pro header não ficar em cima da categoria quando clicar no botao */
+    #CategoriaCamisas{scroll-margin-top: 200px;}
+    #CategoriaMoletom{scroll-margin-top: 200px;}
+    #CategoriaAcessorios{scroll-margin-top: 200px;}
+    #CategoriaPersonalizadas{scroll-margin-top: 200px;}
+    #CategoriaHome{scroll-margin-top: 200px;}
+    #CategoriaTop{scroll-margin-top: 200px;}
+    
+    /* Footer */
+    footer{
+        color: white;
+        font-family: "Inter";
+        line-height: 1.2;
+        height: 300px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        text-align: center;
+    
+        h3{
+            grid-column: 1/span 4;
+            padding-bottom: 50px;
+            font-weight: 300;
+            font-size: 15px;
+        }
+    
+        .FooterItem{
+            margin-top: 50px;
+            ul{
+                list-style: none;
+                padding-left: 0;
+                padding-top: 20px;
+                a{
+                    font-family: "Inter";
+                    color: white;
+                    text-decoration: none;
+                    font-size: 25px;
+                    font-weight: 500;
+                }
+                a:hover{
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+    
+    .FooterLogo{
+        img{
+            width: 60%;
+        }
+        #FooterLogo{
+            width: 40%;
+        }
+    }
